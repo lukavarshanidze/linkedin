@@ -1,0 +1,128 @@
+.signup-logo{
+    width: 1150px;
+    max-width: 100%;
+    height: 86px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.sign__up__main-container{
+    background-color: #f3f2ef;
+}
+.signup-logo .span-linked{
+    color: #0a66c2;
+}
+.signup-logo .span-in{
+    padding: 0px 3px;
+    color: white;
+    background-color: #0a66c2;
+}
+.sign__up-title{
+    text-align: center;
+    padding: 0px 16px;
+}
+.sign__up-form{
+    text-align: center;
+    margin: 0 auto;
+    padding: 24px 24px 13px 24px;
+    background-color: white;
+    width: 400px;
+    margin-top: 28px;
+}
+.sign__up-form label{
+    text-align: start;
+}
+
+
+.sign__up__first-input-group{
+    height: 128;
+}
+.sign__up__first-input-group input{
+    width: 100%;
+    height: 32px;
+}
+.email-input div{
+    padding-bottom: 3px;
+}
+.password-input div{
+    padding-top: 20px;
+    padding-bottom: 3px;
+}
+
+.sign__up__p-privacy {
+    color: rgba(0,0,0,0.6);
+    margin: 16px 0 16px 0;
+    text-align: center;
+    font-size: 13px;
+}
+.sign__up__p-privacy a {
+    color: #0000FF;
+    
+}
+.sign__up-form a:hover, .sign__up__get-help a:hover{
+    text-decoration: underline;
+}
+
+.sing__up-agree-join{
+    width: 100%;
+    background-color: #0A66C2;
+    border-radius: 24px;
+    color: #FFFFFF;
+    height: 48px;
+    border: none;
+    font-size: 17px;
+}
+.sing__up-agree-join:hover{
+    background-color: #073e76;
+}
+
+.sign__up__or-element{
+    padding: 21px 0px;
+}
+
+.sign__up__google__auth{
+    width: 91%;
+    height: 38.4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 24px;
+}
+
+.sign__up__already-have-account {
+    text-align: center;
+    margin: 0 auto;
+    padding: 18px 16px 24px 16px;
+    font-size:17px;
+}
+
+.sign__up__get-help{
+    margin-top: 16px;
+    text-align: center;
+    padding-bottom: 85px;
+}
+
+
+.sign__up-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+    cursor: pointer;
+}
+.sign__up-footer div{
+    padding: 6px;
+    font-size: 14px;
+    color: #00000099;
+}
+.sign__up-footer span{
+    padding: 0px 2px;
+    background-color: gray;
+}
+
+.signup__error__appear {
+    background-color: red;
+    border-radius: 24px;
+}

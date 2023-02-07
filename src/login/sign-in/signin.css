@@ -1,0 +1,172 @@
+.login__logo{
+    width: 1463px;
+    max-width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 52px;
+}
+
+.login__logo .login__span-linked{
+    color: #0a66c2;
+}
+
+.login__span-in{
+    padding: 0px 3px;
+    color: white;
+    background-color: #0a66c2;
+}
+
+.login__sign-in-container{
+    width: 352px;
+    max-width: 100%;
+    background-color: gray;
+    text-align: center;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+}
+.login__header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+.login__header h1, .login__header p{
+    text-align: start;
+}
+
+.login__stay__updated__title p{
+    font-size: 20px;
+}
+
+.login__form__label-and-input{
+    display: flex;
+    padding-top: 25px;
+    
+}
+.login__form__label-and-input input{
+    width: 304px;
+    height: 52px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.6);
+    
+    outline: none;
+}
+.login__form__label-and-input input:focus ~ span,
+.login__form__label-and-input input:valid ~ span{
+   transform: translateY(-18px) translateX(-5px);
+   
+}
+.login__form__label-and-input span{
+    position: absolute;
+    padding: 15px;
+    font-size: 18px;
+    pointer-events: none;
+    transition: 0.2s;
+    color: gray;
+}
+
+
+
+.login__header h1{
+    font-size: 32px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+
+.login__sign-in-container form{
+    width: 100%;
+}
+.login__sign-in-container input{
+    /* width: 100%;
+    height: 52px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.6) */
+}
+
+
+.login__sign-in-container .login__agree-join{
+    width: 100%;
+    height: 52px;
+    color: #FFFFFF;
+    background-color: #0A66C2;
+    border-radius: 28px;
+}
+
+.login__sign-in-container .login__forgot-password{
+    text-align: start;
+    margin-top: 16px;
+    color: #0073b1;
+}
+
+.login__forgot-password a{
+    color: #1522b9;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 28px;
+}
+.login__forgot-password a:hover{
+    text-decoration: underline;
+    background-color: #0c92da4c;
+}
+
+.login__form__sign__in{
+    width: 100%;
+    border-radius: 24px;
+    height: 52px;
+    color: #FFFFFF;
+    background-color: #0A66C2;
+    border: none;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.login__form__sign__in:hover{
+    background-color: #073e76;
+}
+
+.login__or-element{
+    padding: 14px 0px;
+}
+
+.login__google__auth-div button{
+    width: 100%;
+    height: 38.4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 24px;
+}
+.login__google__auth-div button:hover{
+    border: 3px solid rgba(0, 0, 0, 0.541);
+}
+
+.login__apple__auth{
+    width: 100%;
+    height: 38.4px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 24px;
+    margin-top: 15px;
+}
+.login__apple__auth:hover{
+    border: 3px solid rgba(0, 0, 0, 0.541);
+}
+
+.login__failed__to__login{
+    width: auto;
+    color: red;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 5px;
+}
