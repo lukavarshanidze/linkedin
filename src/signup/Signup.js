@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { authStateChanged } from "../redux/actions/AuthStateChanged";
 
 const Signup = () => {
-  const [emailRef, setEmailRef] = useState("");
+  const [email, setEmail] = useState("");
   const [passwordRef, setPasswordRef] = useState("");
   const [error, setError] = useState();
   const navigate = useNavigate();
@@ -15,9 +15,9 @@ const Signup = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    if (emailRef !== "" && passwordRef !== "") {
+    if (email !== "" && passwordRef !== "") {
       try {
-        dispatch(signUp(emailRef, passwordRef));
+        dispatch(signUp(email, passwordRef));
         navigate("/signup/cold-join");
       } catch (error) {
         setError(error.message);
@@ -28,7 +28,7 @@ const Signup = () => {
     //   type: "REGISTER",
     //   payload: {
     //     id: (new Date).getTime(),
-    //     emailRef, passwordRef
+    //     email, passwordRef
     //   }
     // })
   };
@@ -60,8 +60,8 @@ const Signup = () => {
               <div>Email</div>
             </label>
             <input
-              value={emailRef}
-              onChange={(e) => setEmailRef(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               type="text"
               required
             />

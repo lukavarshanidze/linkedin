@@ -3,6 +3,9 @@ import "./signin.css";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase/firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { signIn } from "../../redux/actions/signInAction";
+import { authStateChanged } from "../../redux/actions/AuthStateChanged";
 
 const Signin = () => {
   const [error, setError] = useState();
@@ -10,6 +13,9 @@ const Signin = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.register.currentUser);
+  console.log(currentUser);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -19,9 +25,9 @@ const Signin = () => {
       emailRef.current.value,
       passwordRef.current.value
     )
-      .then((userCredential) => {
-        const user = userCredential.user;
-        // dispatch({ type: "LOGIN", payload: user });
+      .then((user) => {
+        dispatch({ type: "SIGNIN_SUCCESS", payload: user });
+        console.log(user);
         navigate("/dashboard");
       })
       .catch((error) => {

@@ -23,12 +23,12 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [post, setPost] = useState();
   const [input, setInput] = useState("");
+
   const currentUser = useSelector(
     (state) => state.register.currentUser.user.uid
   );
-  const currentUserClone = currentUser;
-  console.log(currentUser && currentUser);
-  const docRef = doc(db, "userInfo", currentUserClone);
+  console.log(currentUser && currentUser.user);
+  const docRef = doc(db, "userInfo", currentUser);
 
   // const createUser = async () => {
   //   await addDoc(usersCollectionRef, {

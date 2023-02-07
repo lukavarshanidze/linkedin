@@ -62,7 +62,7 @@ const registerReducer = (state = initialStore, action) => {
     case "SIGNIN_SUCCESS":
       return {
         ...state,
-        currentUser: action.payload.uid,
+        currentUser: action.payload,
         error: null,
       };
     case "SIGNIN_ERROR":

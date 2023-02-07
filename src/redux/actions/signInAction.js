@@ -3,7 +3,7 @@ import { auth } from "../../firebase/firebase";
 
 export const signIn = (email, password) => {
   return (dispatch) => {
-    signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((user) => {
         dispatch({
           type: "SIGNIN_SUCCESS",

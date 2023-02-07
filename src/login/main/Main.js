@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signIn } from "../../redux/actions/signInAction";
 import { authStateChanged } from "../../redux/actions/AuthStateChanged";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/firebase";
 
 const Main = () => {
   const [error, setError] = useState();
@@ -19,12 +21,20 @@ const Main = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     try {
-      dispatch(authStateChanged);
-      signIn(email, password);
-      navigate("/dashboard");
+      setLoading(true);
+      signInWithEmailAndPassword(auth, email, password)
+        .then((user) => {
+          dispatch({ type: "SIGNIN_SUCCESS", payload: user });
+          console.log(user);
+          navigate("/dashboard");
+        })
+        .catch((error) => {
+          setError("Failed to Log in");
+        });
     } catch (error) {
       setError(error.message);
     }
+    setLoading(false);
   };
 
   return (
@@ -54,7 +64,7 @@ const Main = () => {
               />
             </div>
             <p className="forgot-password">Forgot password?</p>
-            <button type="submit" className="sign-in-button">
+            <button disabled={loading} type="submit" className="sign-in-button">
               Sign in
             </button>
             <p className="p-element-or">or</p>
