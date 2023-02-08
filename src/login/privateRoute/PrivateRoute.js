@@ -4,7 +4,8 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "../../firebase/AuthContext";
 
 const PrivateRoute = ({ children }) => {
-  const currentUSer = true;
+  var currentUSer = useSelector((state) => state.register.isAuthenticated);
+  console.log("kurent", currentUSer && currentUSer);
   return currentUSer ? children : <Navigate to="/" />;
 };
 

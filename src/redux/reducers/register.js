@@ -9,6 +9,7 @@ const initialStore = {
   jobName: "",
   currentUser: null,
   error: null,
+  isAuthenticated: false,
 };
 
 const persistConfig = {
@@ -52,6 +53,7 @@ const registerReducer = (state = initialStore, action) => {
       return {
         ...state,
         currentUser: action.payload,
+        isAuthenticated: true,
         error: null,
       };
     case "SIGN_UP_ERROR":
@@ -63,6 +65,7 @@ const registerReducer = (state = initialStore, action) => {
       return {
         ...state,
         currentUser: action.payload,
+        isAuthenticated: true,
         error: null,
       };
     case "SIGNIN_ERROR":
@@ -70,6 +73,12 @@ const registerReducer = (state = initialStore, action) => {
         ...state,
         currentUser: null,
         error: action.payload,
+      };
+    case "SIGN_OUT":
+      return {
+        ...state,
+        currentUser: null,
+        isAuthenticated: false,
       };
     default:
       return state;

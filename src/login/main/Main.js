@@ -16,8 +16,6 @@ const Main = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log(email);
-  console.log(password);
   const onSubmitHandler = (e) => {
     e.preventDefault();
     try {
@@ -29,6 +27,7 @@ const Main = () => {
           navigate("/dashboard");
         })
         .catch((error) => {
+          console.log("error", error);
           setError("Failed to Log in");
         });
     } catch (error) {

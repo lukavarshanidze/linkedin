@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { db } from "../../firebase/firebase";
+import { auth, db } from "../../firebase/firebase";
 import {
   collection,
   getDocs,
@@ -15,7 +15,8 @@ import {
   getDoc,
 } from "@firebase/firestore";
 import { useAuth } from "../../firebase/AuthContext";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "firebase/auth";
 
 const Dashboard = () => {
   const [newName, setNewName] = useState("");
@@ -23,6 +24,7 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [post, setPost] = useState();
   const [input, setInput] = useState("");
+  const dispatch = useDispatch();
 
   const currentUser = useSelector(
     (state) => state.register.currentUser.user.uid
@@ -59,6 +61,16 @@ const Dashboard = () => {
     getDocFun();
   }, []);
 
+  const signOutHandler = async () => {
+    try {
+      await signOut(auth).then(() => {
+        dispatch({ type: "SIGN_OUT" });
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div>
       {/* <input
@@ -80,6 +92,7 @@ const Dashboard = () => {
       <h2>{users && users.universityName}</h2>
       <h2>{users && users.countryNameAction}</h2>
       <h2>{users && users.jobNameAction}</h2>
+      <button onClick={signOutHandler}>Sign Out</button>
     </div>
   );
 };

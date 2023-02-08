@@ -26,11 +26,13 @@ const Signin = () => {
       passwordRef.current.value
     )
       .then((user) => {
+        dispatch({ type: "AUTH_STATE_CHANGED", payload: user });
         dispatch({ type: "SIGNIN_SUCCESS", payload: user });
         console.log(user);
         navigate("/dashboard");
       })
       .catch((error) => {
+        console.log("error", error.message);
         setError("Failed to Log in");
       });
   };
