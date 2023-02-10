@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./dashboard.styles.css";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../../firebase/firebase";
 import {
@@ -14,7 +15,6 @@ import {
   FieldValue,
   getDoc,
 } from "@firebase/firestore";
-import { useAuth } from "../../firebase/AuthContext";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 
@@ -29,6 +29,7 @@ const Dashboard = () => {
   const currentUser = useSelector(
     (state) => state.register.currentUser.user.uid
   );
+
   console.log(currentUser && currentUser.user);
   const docRef = doc(db, "userInfo", currentUser);
 
@@ -72,27 +73,17 @@ const Dashboard = () => {
   };
 
   return (
-    <div>
-      {/* <input
-        onChange={(e) => setNewName(e.target.value)}
-        placeholder="Name..."
-      /> */}
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
-      <button>post</button>
-
-      {/* <input
-        onChange={(e) => setNewAge(e.target.value)}
-        type="number"
-        placeholder="Age..."
-      /> */}
-      {/* <button onClick={createUser}>Create User</button> */}
-
-      <h2>{users && users.firstNameAction}</h2>
-      <h2>{users && users.lastNameAction}</h2>
-      <h2>{users && users.universityName}</h2>
-      <h2>{users && users.countryNameAction}</h2>
-      <h2>{users && users.jobNameAction}</h2>
-      <button onClick={signOutHandler}>Sign Out</button>
+    <div className="dashboard__header__navbar">
+      <h1>this is the header</h1>
+      <div>
+        {/* <img src="https://www.flaticon.com/free-icon/linkedin_3536505?term=linkedin&page=1&position=1&origin=search&related_id=3536505" /> */}
+      </div>
+      <p>firstName: {users.firstNameAction}</p>
+      <p>lastName: {users.lastNameAction}</p>
+      <p>country: {users.countryNameAction}</p>
+      <p>university: {users.universityName}</p>
+      <p>jobName: {users.jobName && users.jobName}</p>
+      <button onClick={signOutHandler}>sign out</button>
     </div>
   );
 };

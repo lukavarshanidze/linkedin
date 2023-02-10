@@ -12,6 +12,7 @@ import AuthProvider from "./firebase/AuthContext";
 import University from "./signup/university/University";
 import Dashboard from "./signup/dashboard/Dashboard";
 import PrivateRoute from "./login/privateRoute/PrivateRoute";
+<title>title</title>;
 
 function App() {
   return (

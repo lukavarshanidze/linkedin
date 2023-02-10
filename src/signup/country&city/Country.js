@@ -89,7 +89,7 @@ const Country = () => {
               onClick={() => setHidden((current) => !current)}
               onChange={onChangeHandler}
               value={countryName}
-              autoComplete="off"
+              autocomplete="none"
               type="text"
               required
             />
@@ -129,6 +129,7 @@ const Country = () => {
               onClick={() => setHidden(true)}
               onChange={(e) => setCityName(e.target.value)}
               type="text"
+              autocomplete="none"
               required
             />
           </div>
