@@ -7,7 +7,7 @@ li, ul, *{
 
 .navbar-container{
     display: flex;
-    width: 1128px;
+    width: 74%;
     max-width: 100%;
     height: 80px;
     max-height: 100%;
@@ -134,8 +134,9 @@ img{
 }
 
 @media (max-width: 992px){
-    .navbar-container .logo{
-        padding-left: 1%;
+    .navbar-container {
+        padding-left: 2%;
+        width: 100%;
         font-weight: 700;
         font-size: 20px;
     }
@@ -144,3 +145,11 @@ img{
     }
    
 }
+@media only screen and (min-width: 1200px){
+    .navbar-container {
+        width: 74%;
+        height: 80px;
+        max-height: 100%;
+    }
+}
+

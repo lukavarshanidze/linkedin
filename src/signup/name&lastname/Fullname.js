@@ -21,8 +21,8 @@ const Fullname = () => {
     if (firstName === "" || lastName === "") {
       return setError("Please enter your info");
     } else {
-      dispatch(setFirstNameAction(firstName));
-      dispatch(setLastNameAction(lastName));
+      dispatch({ type: "SET_FIRST_NAME", payload: firstName });
+      dispatch({ type: "SET_LAST_NAME", payload: lastName });
       navigate("/signup/select-your-country");
     }
   };
