@@ -16,9 +16,6 @@ const University = () => {
   const currentUser = useSelector(
     (state) => state.register.currentUser.user.uid
   );
-  if (jobNameAction) {
-    var jobName = jobNameAction;
-  }
 
   console.log(currentUser && currentUser);
   const onClickHandler = async (e) => {
@@ -26,11 +23,11 @@ const University = () => {
     try {
       const ref = doc(db, "userInfo", currentUser);
       const docRef = await setDoc(ref, {
-        firstNameAction: firstNameAction,
-        lastNameAction: lastNameAction,
+        firstNameAction,
+        lastNameAction,
         countryNameAction,
         universityName,
-        jobName,
+        jobNameAction,
       });
       navigate("/dashboard");
       console.log("congrats new user created successfully");

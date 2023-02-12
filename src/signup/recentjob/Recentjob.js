@@ -10,7 +10,7 @@ const Recentjob = () => {
   const dispatch = useDispatch();
 
   const continueClickHandler = () => {
-    dispatch(jobNameAction(jobName));
+    dispatch({ type: "SET_JOB_NAME", payload: jobName });
     navigate("/university");
   };
 
@@ -39,7 +39,11 @@ const Recentjob = () => {
             <label className="email-input">
               <div>Most recent job title</div>
             </label>
-            <input onChange={(e) => setJobName(e.target.value)} type="text" />
+            <input
+              onChange={(e) => setJobName(e.target.value)}
+              type="text"
+              value={jobName}
+            />
 
             {jobName && (
               <div className="recentjob__after__type">

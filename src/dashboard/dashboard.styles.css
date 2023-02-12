@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dashboard__linkedin-logo:first-child{
+    width: 34px;
+}
+
+.dashboard__linkedin-logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.dashboard__linkedin-logo{
+    display: flex;
+}
+
+
+.dashboard__feed-navbar-search{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    margin-left: 10px;
+    margin-right: 40px;
+    padding-right: 40px;
+}
+.dashboard__feed-navbar-search input{
+    width: 280px;
+    padding: 0px 38px;
+    height: 100%;
+    border: none;
+    background-color: #EEF3F8;
+    border-radius: 4px;
+}
+.dashboard__feed-navbar-search img{
+    width: 16px;
+    position: absolute;
+    display: flex;
+    left: 14px;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard__header-ul-list {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 660px;
+    height: 52px;
+    margin-left: 69px;
+}
+
+.dashboard__header-ul-list li img{
+    fill: rgba(0, 0, 0, 0.6);
+}
+
+.dashboard__header-ul-list li{
+    box-sizing: border-box;
+    height: 52px;
+    padding: 0;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.dashboard__header-ul-list li p{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.dashboard__header__navbar{
+    width: 74%;
+    margin: auto;
+}
+
+.userPhoto-li-element img{
+    width: 22px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.dashboard__premium-message p{
+    font-size: 10px !important;
+    font-weight: 600;
+    color: #915907 !important;
+    text-decoration: underline;
+    line-height: 18px;
+}
+
+.dashboard__arrow-svg-flex{
+    display: flex;
+    justify-content: center;
+    word-spacing: 4px;
+    align-items: center;
+}
+.dashboard__arrow-svg-flex img{
+    width: 15px;
+}
+
+.dash_container{
+    position: absolute;
+    right: 25%;
+    width: 260px;
+    height: 390px;
+    top: 58px;
+    /* background-color: rgb(255,255,255); */
+    background-color: white;
+    color: #FFFFFF;
+    border-radius: 10px 0 8px 10px;
+}
+
+.dash_popup-img-name img{
+    width: 60px;
+    height: 60px;
+}
+.dash_popup-img-name{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+
+.dash_view-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0A66C2;
+    color: #0A66C2 !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    margin: 0 10px;
+    margin-top: 5px;
+    padding: 2px 0px;
+    border-radius: 20px;
+}
+
+.dash_border_bottom{
+    margin-top: 8px;
+    border: 1px solid rgb(240, 239, 239);
+}
+
+.dash_flex-icon-and-premium{
+    display: flex;
+}
+
+.dash_container h4{
+    color: rgba(0, 0, 0, 0.73);
+}
+.dash_container p{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px !important;
+    
+}
+
+.dash_account-h{
+    margin-top: 8px;
+}
+.dash_starting-at-account-el{
+    margin-left: 8px;
+    line-height: 27px;
+}
+.dash_starting-at-account-el p:hover, .dash_starting-at-account-el a:hover{
+    text-decoration: underline;
+}
+.dash_fullname {
+    margin-left: 7px;
+    font-size: 15px ;
+}
+.dash_fullname h3{
+    color: rgba(0, 0, 0, 0.9);
+}

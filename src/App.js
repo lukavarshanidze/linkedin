@@ -10,7 +10,7 @@ import Country from "./signup/country&city/Country";
 import Recentjob from "./signup/recentjob/Recentjob";
 import AuthProvider from "./firebase/AuthContext";
 import University from "./signup/university/University";
-import Dashboard from "./signup/dashboard/Dashboard";
+import Dashboard from "./dashboard/Dashboard";
 import PrivateRoute from "./login/privateRoute/PrivateRoute";
 <title>title</title>;
 
