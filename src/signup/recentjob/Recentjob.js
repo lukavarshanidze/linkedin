@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./recentjob.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { jobNameAction } from "../../redux/actions/setJobNameAction";
 
 const Recentjob = () => {
   const [jobName, setJobName] = useState();
