@@ -55,7 +55,7 @@ const Body = ({ el }) => {
         </div>
         {/* end of .feed__profile_info_left-side */}
         <div>post</div>
-        <div>add your feed</div>
+        <div>add to your feed</div>
       </div>
     </div>
   );

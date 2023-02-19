@@ -1,6 +1,4 @@
 .sign-in-container{
-    padding-left: 13%;
-    padding-top: 40px;
 }
 .sign-in-container .sign-in-h1{
         font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -122,5 +120,14 @@ input{
 
     .sign-in-container .sign-in-h1{
         width: 408px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .sign-in-container {
+        width: 1145px;
+        display: flex;
+        padding-top: 38px;
+        margin: auto;
     }
 }

@@ -171,3 +171,35 @@
 .dash_fullname h3{
     color: rgba(0, 0, 0, 0.9);
 }
+.dashboard__body__div{
+    background-color: rgba(128, 128, 128, 0.148);
+}
+
+
+
+@media only screen and (min-width: 1200px){
+    .dashboard__header__navbar {
+        width: 1113px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .feed__profile_info_left-side{
+        
+    }
+}
+
+@media screen 
+  and (min-width: 1024px) 
+  and (max-width: 1200px) {
+    .dashboard__header__navbar  {
+        width: 1113px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+  }
+
+@media screen
+and (min-width: 768px) 
+and (max-width: 1024px) {
+
+}

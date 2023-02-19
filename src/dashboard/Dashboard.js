@@ -188,7 +188,9 @@ const Dashboard = () => {
           </nav>
         </div>
       </div>
-      <Body el={users} />
+      <div className="dashboard__body__div">
+        <Body el={users} />
+      </div>
     </div>
   );
 };
