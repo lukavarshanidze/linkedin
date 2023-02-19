@@ -27,6 +27,7 @@ import notificationlogo from "./icons/notificationlogo.svg";
 import userPhoto from "./icons/user.png";
 import workLogo from "./icons/worklogo.svg";
 import downarrowsvg from "./icons/downarrowsvg.svg";
+import Body from "./body/body";
 
 const Dashboard = () => {
   const [newName, setNewName] = useState("");
@@ -96,95 +97,98 @@ const Dashboard = () => {
       <button onClick={signOutHandler}>sign out</button> */
   }
   return (
-    <div className="dashboard__header__navbar">
-      <div className="dashboard__linkedin-logo">
-        <img className="dashboad__linkedin-logo-img" src={linkedinlogo} />
+    <div>
+      <div className="dashboard__header__navbar">
+        <div className="dashboard__linkedin-logo">
+          <img className="dashboad__linkedin-logo-img" src={linkedinlogo} />
 
-        <div className="dashboard__feed-navbar-search">
-          <img className="dashboard__linkeding-search-img" src={searchicon} />
-          <input placeholder="Search" />
-        </div>
+          <div className="dashboard__feed-navbar-search">
+            <img className="dashboard__linkeding-search-img" src={searchicon} />
+            <input placeholder="Search" />
+          </div>
 
-        <nav>
-          <ul className="dashboard__header-ul-list">
-            <li>
-              <img src={homelogo} />
-              <p>Home</p>
-            </li>
-            <li>
-              <img src={networklogo} />
-              <p>My Network</p>
-            </li>
-            <li>
-              <img src={jobslogo} />
-              <p>Jobs</p>
-            </li>
-            <li>
-              <img src={messagelogo} />
-              <p>Messaging</p>
-            </li>
-            <li>
-              <img src={notificationlogo} />
-              <p>Notifications</p>
-            </li>
-            <li
-              onClick={() => setHidden((current) => !current)}
-              className="userPhoto-li-element"
-            >
-              <img src={userPhoto} />
-              <div className="dashboard__arrow-svg-flex">
-                <p>Me</p>
-                <img src={downarrowsvg} />
-              </div>
-              {hidden && (
-                <div className="dash_container">
-                  <div className="dash_popup-img-name">
-                    <img src={userPhoto} />
-                    <div className="dash_fullname">
-                      <h3>
-                        {users.firstNameAction + " " + users.lastNameAction}{" "}
-                      </h3>
-                      <p className="dash_tire">--</p>
-                    </div>
-                  </div>
-                  <p className="dash_view-profile">View Profile</p>
-                  <p className="dash_border_bottom"></p>
-
-                  <div className="dash_starting-at-account-el">
-                    <h4 className="dash_account-h">Account</h4>
-
-                    <div className="dash_flex-icon-and-premium">
-                      <p>icon</p>
-                      <div>
-                        <p>Try Premium for Free</p>
+          <nav>
+            <ul className="dashboard__header-ul-list">
+              <li>
+                <img src={homelogo} />
+                <p>Home</p>
+              </li>
+              <li>
+                <img src={networklogo} />
+                <p>My Network</p>
+              </li>
+              <li>
+                <img src={jobslogo} />
+                <p>Jobs</p>
+              </li>
+              <li>
+                <img src={messagelogo} />
+                <p>Messaging</p>
+              </li>
+              <li>
+                <img src={notificationlogo} />
+                <p>Notifications</p>
+              </li>
+              <li
+                onClick={() => setHidden((current) => !current)}
+                className="userPhoto-li-element"
+              >
+                <img src={userPhoto} />
+                <div className="dashboard__arrow-svg-flex">
+                  <p>Me</p>
+                  <img src={downarrowsvg} />
+                </div>
+                {hidden && (
+                  <div className="dash_container">
+                    <div className="dash_popup-img-name">
+                      <img src={userPhoto} />
+                      <div className="dash_fullname">
+                        <h3>
+                          {users.firstNameAction + " " + users.lastNameAction}{" "}
+                        </h3>
+                        <p className="dash_tire">--</p>
                       </div>
                     </div>
-                    <p>Settings & Privacy</p>
-                    <p>Help</p>
-                    <p>Language</p>
+                    <p className="dash_view-profile">View Profile</p>
                     <p className="dash_border_bottom"></p>
-                    <h4>Manage</h4>
-                    <p>Posts & Activity</p>
-                    <p>Job Posting Account</p>
-                    <p className="dash_border_bottom"></p>
-                    <a onClick={signOutHandler}>Sign out</a>
+
+                    <div className="dash_starting-at-account-el">
+                      <h4 className="dash_account-h">Account</h4>
+
+                      <div className="dash_flex-icon-and-premium">
+                        <p>icon</p>
+                        <div>
+                          <p>Try Premium for Free</p>
+                        </div>
+                      </div>
+                      <p>Settings & Privacy</p>
+                      <p>Help</p>
+                      <p>Language</p>
+                      <p className="dash_border_bottom"></p>
+                      <h4>Manage</h4>
+                      <p>Posts & Activity</p>
+                      <p>Job Posting Account</p>
+                      <p className="dash_border_bottom"></p>
+                      <a onClick={signOutHandler}>Sign out</a>
+                    </div>
                   </div>
+                )}
+              </li>
+              <li>
+                <img src={workLogo} />
+                <div className="dashboard__arrow-svg-flex">
+                  <p>Work</p>
+                  <img src={downarrowsvg} />
                 </div>
-              )}
-            </li>
-            <li>
-              <img src={workLogo} />
-              <div className="dashboard__arrow-svg-flex">
-                <p>Work</p>
-                <img src={downarrowsvg} />
-              </div>
-            </li>
-            <li className="dashboard__premium-message">
-              <p>Get Hired Faster, Try Premium Free</p>
-            </li>
-          </ul>
-        </nav>
+              </li>
+              <li className="dashboard__premium-message">
+                <p>Get Hired Faster, Try Premium Free</p>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      <Body el={users} />
     </div>
   );
 };

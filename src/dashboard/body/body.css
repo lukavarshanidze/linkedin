@@ -1,0 +1,109 @@
+
+.feed__body-container{
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.092);
+}
+.feed__body-items-container{
+    width: 74%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed__profile_info_left-side img{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+.feed__profile_info_left-side{
+    width: 225px;
+    margin-top: 22px;
+    padding: 0px 12px;
+    border-radius: 10px;
+    background-color: white;
+}
+.feed__profile_info_left-side p, .feed__profile_info_left-side span{
+    cursor: pointer;
+}
+.feed_left-side__fullname{
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.823)
+}
+.feed_left-side__fullname:hover{
+    text-decoration: underline;
+    
+}
+.feed__profile__img-and-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.feed__profile__view-profile-span{
+    float: right;
+    color: #0A66c2;
+    font-size: 16px;
+}
+
+.feed__display-flex-everywhere, .feed__my-items-logo{
+    display:flex;
+    align-items: center;
+}
+.feed__premium-logo img{
+    width: 16px;
+    height: auto;
+}
+.feed__premium-logo p {
+    font-size: 12px;
+    margin-left: 3px;
+}
+.feed__my-items-logo img{
+    width: 11px;
+    height: 30px;
+    margin-left: 2px;
+}
+.feed__my-items-logo span{
+    font-size: 13px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+.feed__my-items-logo{
+    margin-top: 5px;
+}
+.feed_font-size-12px{
+    font-size: 12px;
+    color: #00000098;
+}
+
+.feed__underline{
+    padding: 0;
+    margin-top: 16px;
+    border: 1px solid rgb(240, 232, 232) ;
+    
+}
+.feed__manage-your-network{
+    font-size: 12px;
+    color: bold #000000;
+}
+
+.feed_same_background:hover{
+    background-color: #00000024;
+}
+
+.feed__whos_viewed-your-profile{
+    margin-top: 13px;
+}
+
+.feed__access-and-premium-together{
+    margin-top: 10px;
+}
+.feed__underline__after-premium{
+    padding: 0;
+    margin-top: 11px;
+    border: 1px solid rgb(240, 232, 232) ;
+}

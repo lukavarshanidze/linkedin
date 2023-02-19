@@ -12,12 +12,6 @@
     align-items: center;
 }
 
-
-.dashboard__linkedin-logo{
-    display: flex;
-}
-
-
 .dashboard__feed-navbar-search{
     display: flex;
     position: relative;
@@ -81,6 +75,7 @@
     height: 20px;
     object-fit: cover;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -97,6 +92,7 @@
     justify-content: center;
     word-spacing: 4px;
     align-items: center;
+    cursor: pointer;
 }
 .dashboard__arrow-svg-flex img{
     width: 15px;
